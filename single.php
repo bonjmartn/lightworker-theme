@@ -28,14 +28,14 @@
 
       <?php
         $defaults = array(
-          'before'           => '<p>' . __( 'Pages:', 'lightworker-basic' ),
+          'before'           => '<p>' . __( 'Pages:', 'lightworker' ),
           'after'            => '</p>',
           'link_before'      => '',
           'link_after'       => '',
           'next_or_number'   => 'number',
           'separator'        => ' ',
-          'nextpagelink'     => __( 'Next page', 'lightworker-basic' ),
-          'previouspagelink' => __( 'Previous page', 'lightworker-basic' ),
+          'nextpagelink'     => __( 'Next page', 'lightworker' ),
+          'previouspagelink' => __( 'Previous page', 'lightworker' ),
           'pagelink'         => '%',
           'echo'             => 1
         );

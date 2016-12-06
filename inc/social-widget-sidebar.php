@@ -1,25 +1,25 @@
 <?php 
 
 // register social widget
-function register_social_widget_footer() {
-    register_widget( 'social_widget_footer' );
+function register_social_widget_sidebar() {
+    register_widget( 'social_widget_sidebar' );
 }
-add_action( 'widgets_init', 'register_social_widget_footer' );
+add_action( 'widgets_init', 'register_social_widget_sidebar' );
 
 
 /**
- * Adds social_widget_footer widget.
+ * Adds social_widget_sidebar widget.
  */
-class social_widget_footer extends WP_Widget {
+class social_widget_sidebar extends WP_Widget {
 
   /**
    * Register widget with WordPress.
    */
   function __construct() {
     parent::__construct(
-      'social_widget_footer', // Base ID
-      __( 'Social Icons Footer', 'lightworker' ), // Name
-      array( 'description' => __( 'Social Icons for the Footer', 'lightworker' ), ) // Args
+      'social_widget_sidebar', // Base ID
+      __( 'Social Icons Sidebar', 'lightworker' ), // Name
+      array( 'description' => __( 'Social Icons for the sidebar', 'lightworker' ), ) // Args
     );
   }
 
@@ -52,6 +52,8 @@ class social_widget_footer extends WP_Widget {
     $vimeo = esc_url( $instance['vimeo'] );
     $vine = esc_url( $instance['vine'] );
     $tumblr = esc_url( $instance['tumblr'] );
+
+    echo sprintf( '<div class="social-sidebar-widget">');
 
     if ( ! empty( $instance['facebook'] ) ) {
       echo sprintf( '<a href="' . $facebook . '"><i class="fa fa-facebook-official"></i></a>');
@@ -113,6 +115,8 @@ class social_widget_footer extends WP_Widget {
       echo sprintf( '<a href="' . $tumblr . '"><i class="fa fa-tumblr"></i></a>');
     }
 
+    echo sprintf( '</div>');
+
     echo $args['after_widget'];
   }
 
@@ -142,6 +146,11 @@ class social_widget_footer extends WP_Widget {
     $tumblr = ! empty( $instance['tumblr'] ) ? $instance['tumblr'] : __( '', 'lightworker' );
     ?>
 
+    <p>
+    <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Follow Us', 'lightworker' ); ?></label> 
+    <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" 
+    value="<?php echo esc_attr( $title ); ?>">
+    </p>
 
     <p>
     <label for="<?php echo $this->get_field_id('facebook_field'); ?>"><?php _e('Enter the URL for your Facebook page', 'lightworker'); ?></label>
@@ -267,6 +276,6 @@ class social_widget_footer extends WP_Widget {
     return $instance;
   }
 
-} // class social_widget_footer
+} // class social_widget_sidebar
 
 ?>

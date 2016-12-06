@@ -30,6 +30,22 @@
             </div>
           </div>
         </div>
+        <div class="item">
+          <img class="fourth-slide" src="<?php echo get_theme_mod( 'slide_4_img' ); ?>" alt="<?php echo get_theme_mod( 'slide_4_headline' ); ?>">
+          <div class="container">
+            <div class="carousel-caption">
+              <a href="<?php echo get_theme_mod( 'slide_4_link' ); ?>"><h1 id="headline-4"><?php echo get_theme_mod( 'slide_4_headline' ); ?></h1></a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="fifth-slide" src="<?php echo get_theme_mod( 'slide_5_img' ); ?>" alt="<?php echo get_theme_mod( 'slide_5_headline' ); ?>">
+          <div class="container">
+            <div class="carousel-caption">
+              <a href="<?php echo get_theme_mod( 'slide_5_link' ); ?>"><h1 id="headline-5"><?php echo get_theme_mod( 'slide_5_headline' ); ?></h1></a>
+            </div>
+          </div>
+        </div>
       </div>
       <a class="left carousel-control" href="#lightCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -42,6 +58,37 @@
     </div><!-- end of carousel -->
 
 </div><!-- end of page container -->
+
+<!-- Homepage 3 Boxes -->
+
+<div class="page-container homepage-3">
+
+    <div class="section group">
+
+      <div class="col span_4_of_12 homepage-3-boxes">
+      <?php if ( ! dynamic_sidebar( 'create-your-own-1') ): ?>
+        <h3>Homepage Feature 1</h3>
+        <p>Set up your content with a widget. Go to Appearance > Widgets and use the Homepage Feature widget.</p>
+      <?php endif; ?>
+      </div>
+
+      <div class="col span_4_of_12 homepage-3-boxes">
+      <?php if ( ! dynamic_sidebar( 'create-your-own-2') ): ?>
+        <h3>Homepage Feature 2</h3>
+        <p>Set up your content with a widget. Go to Appearance > Widgets and use the Homepage Feature widget.</p>
+      <?php endif; ?>
+      </div>
+
+      <div class="col span_4_of_12 homepage-3-boxes">
+      <?php if ( ! dynamic_sidebar( 'create-your-own-3') ): ?>
+        <h3>Homepage Feature 3</h3>
+        <p>Set up your content with a widget. Go to Appearance > Widgets and use the Homepage Feature widget.</p>
+      <?php endif; ?>
+      </div>
+
+    </div>         
+
+</div> 
 
 <!-- Posts and Sidebar -->
 
@@ -59,7 +106,7 @@
 
       <?php endwhile; else : ?>
 
-      <p><?php _e( 'Sorry, no posts matched your criteria.', 'lightworker-basic' ); ?></p>
+      <p><?php _e( 'Sorry, no posts matched your criteria.', 'lightworker' ); ?></p>
 
       <?php endif; ?> 
 
@@ -111,6 +158,15 @@
   </div>
 
 </div>  
+
+<div class="footer-cta">
+
+  <?php if ( ! dynamic_sidebar( 'front-bar') ): ?>
+    <h3>Call to Action Bar Setup</h3>
+    <p>Set up your call to action bar with a widget.<br>Go to Appearance > Widgets. Drag the "Call to Action Bar" widget to the "Call to Action Bar" section.</p>
+  <?php endif; ?>
+
+</div>
 
 </div><!-- end of page container -->
 

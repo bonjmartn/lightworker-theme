@@ -1,14 +1,14 @@
 /*
-Theme Name: Lightworker Basic
-Theme URI: https://www.zenwebthemes.com/shop-themes/lightworker-basic/
+Theme Name: Lightworker
+Theme URI: https://www.zenwebthemes.com/shop-themes/lightworker/
 Author: Bonnie Martin
 Author URI: https://www.zenwebthemes.com
-Description: lightworker-basic is an all-purpose blog theme especially for those who are trying to make a difference in the world.
+Description: Lightworker is an all-purpose blog theme especially for those who are trying to make a difference in the world.
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: two-columns, left-sidebar, right-sidebar, full-width-template, custom-colors, custom-header, custom-menu, featured-images, footer-widgets, theme-options, blog
-Text Domain: lightworker-basic
+Text Domain: lightworker
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -470,12 +470,78 @@ a:active {
 	text-align: center;
 }
 
+/* Feature widgets on the homepage */
+
+/* container for the 3 boxes under the large image */
+.homepage-3 {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+/* the 3 boxes themselves */
+.homepage-3-boxes {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.homepage-3-boxes p {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.homepage-3-boxes,
+.homepage-3-boxes h3 {
+	text-align: center;
+}
+
+.homepage-3-boxes h3 {
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.homepage-3-boxes img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.homepage-3-boxes .widget {
+	padding: 10px;
+}
+
+/* call to action above the footer */
+
+.footer-cta {
+	background-color: #f5f5f5;
+	color: #333333;
+	text-align: center;
+	font-size: 20px;
+	padding-top: 20px;
+	padding-bottom: 35px;
+	margin-top: 30px;
+}
+
+.footer-cta button {
+	background-color: #d37470;
+	color: #FFFFFF;
+}
+
+.footer-cta button:hover {
+	background-color: #808080;
+}
+
+.footer-cta h3 {
+	color: #333333 !important;
+}
+
 /* Bootstrap Carousel Customizations
 -------------------------------------------------- */
 
 #headline-1,
 #headline-2,
-#headline-3 {
+#headline-3,
+#headline-4,
+#headline-5 {
 	color: #FFFFFF;
 	font-weight: 700;
 	letter-spacing: 1px;
@@ -1102,6 +1168,13 @@ p.nocomments { /* Message displayed when there are no comments */
 /* =Widgets
 ----------------------------------------------- */
 
+/* End of Posts Widget */
+
+.endofpost {
+	background-color: #f5f5f5;
+	padding: 20px;
+}
+
 /* Sidebar Widgets */
 
 .sidebar {
@@ -1122,6 +1195,30 @@ p.nocomments { /* Message displayed when there are no comments */
 
 .sidebar .widget {
 	margin-bottom: 40px;
+}
+
+.sidebar .widget .social-sidebar-widget {
+	padding-top: 20px;
+	text-align: center;
+}
+
+.sidebar .widget .social-sidebar-widget .fa {
+	font-size: 20px;
+	margin: 0 15px 15px 0;
+}
+
+.aboutbox .widget img {
+	margin-bottom: 20px;
+}
+
+@media (max-width: 760px) {
+
+	.aboutbox .widget img {
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+		width: 400px;
+	}
 }
 
 /* General Widget Stuff */

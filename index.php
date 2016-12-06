@@ -32,10 +32,10 @@
         <?php endwhile; else: ?>
 
         <div class="page-header">
-            <h1 class="page-title"><?php _e( 'Oh no!', 'lightworker-basic' ); ?></h1>
+            <h1 class="page-title"><?php _e( 'Oh no!', 'lightworker' ); ?></h1>
         </div>
 
-        <p><?php _e( 'No content is appearing for this page!', 'lightworker-basic' ); ?></p>
+        <p><?php _e( 'No content is appearing for this page!', 'lightworker' ); ?></p>
 
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>></div> 
 
